@@ -26,11 +26,15 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -42,8 +46,7 @@
               "RelativeToolTip": "BlogApplication.API\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T10:10:54.04Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-12T10:10:54.04Z"
             },
             {
               "$type": "Document",
@@ -55,8 +58,7 @@
               "RelativeToolTip": "BlogApplication.API\\Repositories\\Implementation\\CategoryRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T10:07:39.097Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-12T10:07:39.097Z"
             },
             {
               "$type": "Document",
@@ -68,8 +70,7 @@
               "RelativeToolTip": "BlogApplication.API\\Repositories\\Interface\\ICategoryRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T10:06:30.842Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-12T10:06:30.842Z"
             },
             {
               "$type": "Document",
@@ -79,7 +80,7 @@
               "RelativeDocumentMoniker": "BlogApplication.API\\Controllers\\CategoriesController.cs",
               "ToolTip": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\Controllers\\CategoriesController.cs",
               "RelativeToolTip": "BlogApplication.API\\Controllers\\CategoriesController.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAACMAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAAB4AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-08T06:52:08.051Z",
               "EditorCaption": ""
