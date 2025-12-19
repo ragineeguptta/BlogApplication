@@ -38,7 +38,18 @@ namespace BlogApplication.API.Controllers
             return Ok(response);
         }
 
-
+        [HttpGet]
+        public async Task<IActionResult> GetAllCategories()
+        {
+            var categories = await categoryRepository.GetAllAsync();
+            var response = categories.Select(category => new CategoryDto
+            {
+                Id = category.Id,
+                Name = category.Name,
+                UrlHandle = category.UrlHandle
+            });
+            return Ok(response);
+        }
 
 
     }
