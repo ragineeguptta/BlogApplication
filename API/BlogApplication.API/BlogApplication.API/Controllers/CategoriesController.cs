@@ -38,6 +38,8 @@ namespace BlogApplication.API.Controllers
             return Ok(response);
         }
 
+        //Get: https://localhost:7257/api/Categories
+
         [HttpGet]
         public async Task<IActionResult> GetAllCategories()
         {
@@ -50,6 +52,9 @@ namespace BlogApplication.API.Controllers
             });
             return Ok(response);
         }
+
+
+        //Get: https://localhost:7257/api/Categories/{id}
 
 
     }
