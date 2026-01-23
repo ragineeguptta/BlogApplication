@@ -25,5 +25,10 @@ namespace BlogApplication.API.Repositories.Implementation
         {
             return await _context.Categories.ToListAsync();
         }
+
+        public Task<Category?> GetById(Guid id)
+        {
+            return _context.Categories.FirstOrDefaultAsync(x => x.Id == id);
+        }
     }
 }
