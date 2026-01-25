@@ -42,8 +42,7 @@
               "RelativeToolTip": "BlogApplication.API\\Repositories\\Interface\\ICategoryRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-19T15:24:55.613Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-19T15:24:55.613Z"
             },
             {
               "$type": "Document",
@@ -55,8 +54,7 @@
               "RelativeToolTip": "BlogApplication.API\\Repositories\\Implementation\\CategoryRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-19T15:24:52.485Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-19T15:24:52.485Z"
             },
             {
               "$type": "Document",
@@ -64,9 +62,9 @@
               "Title": "CategoriesController.cs",
               "DocumentMoniker": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\Controllers\\CategoriesController.cs",
               "RelativeDocumentMoniker": "BlogApplication.API\\Controllers\\CategoriesController.cs",
-              "ToolTip": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\Controllers\\CategoriesController.cs",
-              "RelativeToolTip": "BlogApplication.API\\Controllers\\CategoriesController.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAmwEYAAAAtAAAAAAAAAA==",
+              "ToolTip": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\Controllers\\CategoriesController.cs*",
+              "RelativeToolTip": "BlogApplication.API\\Controllers\\CategoriesController.cs*",
+              "ViewState": "AgIAACgAAAAAAAAAAAAmwDgAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-19T15:23:01.989Z",
               "EditorCaption": ""

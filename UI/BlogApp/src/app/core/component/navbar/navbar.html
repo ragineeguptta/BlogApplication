@@ -1,22 +1,65 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Blog App</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+
+    <!-- Brand -->
+    <a class="navbar-brand fw-bold d-flex align-items-center" routerLink="/">
+      <i class="bi bi-journal-text me-2 text-warning"></i>
+      Blog<span class="text-warning">App</span>
+    </a>
+
+    <!-- Mobile Toggle -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+
+        <!-- Home -->
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Admin
+          <a class="nav-link active fw-semibold" routerLink="/">
+            <i class="bi bi-house-door me-1"></i> Home
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" [routerLink]="['admin','category']">Category</a></li>
+        </li>
+
+        <!-- Admin Dropdown -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle fw-semibold"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="bi bi-shield-lock me-1"></i> Admin
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-end shadow">
+            <li>
+              <a class="dropdown-item" [routerLink]="['admin','category']">
+                <i class="bi bi-tags me-2"></i> Category
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" [routerLink]="['admin','posts']">
+                <i class="bi bi-file-earmark-text me-2"></i> Posts
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" [routerLink]="['admin','users']">
+                <i class="bi bi-people me-2"></i> Users
+              </a>
+            </li>
           </ul>
         </li>
+
       </ul>
     </div>
   </div>

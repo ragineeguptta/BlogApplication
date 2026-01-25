@@ -68,7 +68,7 @@ namespace BlogApplication.API.Controllers
             var response = new CategoryDto
             {
                 Id = existingCategory.Id,
-                Name = existingCategory.Name,
+                Name = existingCategory.Name,   
                 UrlHandle = existingCategory.UrlHandle
             };
 

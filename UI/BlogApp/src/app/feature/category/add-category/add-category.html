@@ -1,31 +1,95 @@
-<div class="container">
-    <h1 class="mt-3">Add Category</h1>
+<div class="container mt-4">
 
-    <form [formGroup]="addCategoryFormGroup" (ngSubmit)="onSubmit()">
-        <div class="mt-3">
-            <div class="mt-3">
-                <label class="form-label">Name</label>
-                <input type="text" class="form-control" formControlName="name" />
-                @if(addCategoryFormGroup.touched && nameFormControl.hasError('required')){
-                    <p class="text-danger small">This is required field</p>
-                }
-                @if(addCategoryFormGroup.touched && nameFormControl.hasError('maxlength')){
-                    <p class="text-danger small">max 100 char long</p>
-                }
-            </div>
-            <div class="mt-3">
-                <label class="form-label">URL Handle (Slug)</label>
-                <input type="text" class="form-control" formControlName="urlHandle" />
-                @if(addCategoryFormGroup.touched && urlHandleFormControl.hasError('required')){
-                    <p class="text-danger small">This is required field</p>
-                }
-                @if(addCategoryFormGroup.touched && urlHandleFormControl.hasError('maxlength')){
-                    <p class="text-danger small">max 100 char long</p>
-                }
-            </div>
-            <div class="mt-3">
-                <button type="submit" class="btn btn-primary" [disabled]="addCategoryFormGroup.valid === false" >Save</button>
-            </div>
+  <!-- PAGE HEADER -->
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+      <h3 class="fw-bold mb-0">
+        <i class="bi bi-plus-circle text-primary me-2"></i>
+        Add Category
+      </h3>
+    </div>
+  </div>
+
+  <!-- FORM CARD -->
+  <div class="card shadow-sm">
+    <div class="card-body">
+
+      <form [formGroup]="addCategoryFormGroup" (ngSubmit)="onSubmit()">
+
+        <!-- NAME -->
+        <div class="mb-3">
+          <label class="form-label fw-semibold">
+            Category Name
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter category name"
+            formControlName="name"
+          />
+
+          @if (nameFormControl.touched && nameFormControl.hasError('required')) {
+            <small class="text-danger">
+              <i class="bi bi-exclamation-circle me-1"></i>
+              Category name is required
+            </small>
+          }
+
+          @if (nameFormControl.touched && nameFormControl.hasError('maxlength')) {
+            <small class="text-danger">
+              <i class="bi bi-exclamation-circle me-1"></i>
+              Maximum 100 characters allowed
+            </small>
+          }
         </div>
-    </form>
+
+        <!-- URL HANDLE -->
+        <div class="mb-3">
+          <label class="form-label fw-semibold">
+            URL Handle (Slug)
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="e.g. web-development"
+            formControlName="urlHandle"
+          />
+
+          @if (urlHandleFormControl.touched && urlHandleFormControl.hasError('required')) {
+            <small class="text-danger">
+              <i class="bi bi-exclamation-circle me-1"></i>
+              URL handle is required
+            </small>
+          }
+
+          @if (urlHandleFormControl.touched && urlHandleFormControl.hasError('maxlength')) {
+            <small class="text-danger">
+              <i class="bi bi-exclamation-circle me-1"></i>
+              Maximum 100 characters allowed
+            </small>
+          }
+        </div>
+
+        <!-- ACTIONS -->
+        <div class="d-flex justify-content-end gap-2">
+          <a
+            routerLink="/admin/category"
+            class="btn btn-outline-secondary">
+            Cancel
+          </a>
+
+          <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="addCategoryFormGroup.invalid">
+            <i class="bi bi-save me-1"></i>
+            Save Category
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
 </div>
