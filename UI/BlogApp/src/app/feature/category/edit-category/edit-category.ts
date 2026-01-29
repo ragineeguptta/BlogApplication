@@ -1,6 +1,8 @@
 import { Component, effect, inject, input } from '@angular/core';
 import { CategoryService } from '../services/category-service';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from "@angular/forms";
+import { UpdateCategoryRequest } from '../model/category.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-edit-category',
@@ -9,8 +11,23 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from "@angula
   styleUrl: './edit-category.css',
 })
 export class EditCategory {
+
+constructor() {
+  effect(() => {
+    if (this.categoryService.updateCategoryStatus() === 'success') {
+      this.categoryService.updateCategoryStatus.set('idle');
+      this.router.navigate(['/admin/category']);
+    }
+    if (this.categoryService.updateCategoryStatus() === 'error') {
+      this.categoryService.updateCategoryStatus.set('idle');
+      console.error('Error updating category');
+    }
+  });
+}
+
   id = input<string>();
   private categoryService = inject(CategoryService);
+  private router = inject(Router);
 
   categoryResourceRef = this.categoryService.getCategoryById(this.id);
   categoryResponse = this.categoryResourceRef.value;
@@ -39,7 +56,20 @@ export class EditCategory {
   });
 
 onSubmit(){
-  console.log(this.editCategoryFormGroup.getRawValue());
+  const id = this.id();
+  if(!this.editCategoryFormGroup.valid || !id){
+    return;
+  }
+
+   const formRawValue = this.editCategoryFormGroup.getRawValue();
+
+   const updateCategoryRequestDto: UpdateCategoryRequest = {
+    name: formRawValue.name,
+    urlHandle: formRawValue.urlHandle,
+   };
+
+   this.categoryService.updateCategory(id, updateCategoryRequestDto);
+
 }
 
 }

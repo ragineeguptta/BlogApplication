@@ -30,5 +30,20 @@ namespace BlogApplication.API.Repositories.Implementation
         {
             return _context.Categories.FirstOrDefaultAsync(x => x.Id == id);
         }
+
+        public async Task<Category?> UpdateAsync(Category category)
+        {
+            var existingCategory = await _context.Categories.FirstOrDefaultAsync<Category>(x => x.Id == category.Id);
+
+            if (existingCategory == null)
+            {
+                return null;
+            }
+            _context.Entry(existingCategory).CurrentValues.SetValues(category);
+            await _context.SaveChangesAsync();
+
+            return category;
+
+        }
     }
 }
