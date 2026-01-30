@@ -2,11 +2,11 @@ import { Component, effect, inject, input } from '@angular/core';
 import { CategoryService } from '../services/category-service';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from "@angular/forms";
 import { UpdateCategoryRequest } from '../model/category.model';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-edit-category',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, RouterLink],
   templateUrl: './edit-category.html',
   styleUrl: './edit-category.css',
 })
@@ -70,6 +70,22 @@ onSubmit(){
 
    this.categoryService.updateCategory(id, updateCategoryRequestDto);
 
+}
+
+onDeleteCategory(){
+  const id = this.id();
+  if(!id){
+    return;
+  }
+
+  this.categoryService.deleteCategory(id).subscribe({
+    next: () => {
+      this.router.navigate(['/admin/category']);
+    },
+    error: () => {
+      console.error('Error deleting category');
+    },
+  });
 }
 
 }

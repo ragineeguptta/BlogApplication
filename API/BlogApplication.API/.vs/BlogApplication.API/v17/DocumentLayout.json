@@ -46,8 +46,7 @@
               "RelativeToolTip": "BlogApplication.API\\DTO\\UpdateCategoryRequestDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T15:09:29.371Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-29T15:09:29.371Z"
             },
             {
               "$type": "Document",
@@ -57,7 +56,7 @@
               "RelativeDocumentMoniker": "BlogApplication.API\\Repositories\\Interface\\ICategoryRepository.cs",
               "ToolTip": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\Repositories\\Interface\\ICategoryRepository.cs",
               "RelativeToolTip": "BlogApplication.API\\Repositories\\Interface\\ICategoryRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-19T15:24:55.613Z",
               "EditorCaption": ""
@@ -70,7 +69,7 @@
               "RelativeDocumentMoniker": "BlogApplication.API\\Repositories\\Implementation\\CategoryRepository.cs",
               "ToolTip": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\Repositories\\Implementation\\CategoryRepository.cs",
               "RelativeToolTip": "BlogApplication.API\\Repositories\\Implementation\\CategoryRepository.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCwAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAkwDwAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-19T15:24:52.485Z",
               "EditorCaption": ""
@@ -83,7 +82,7 @@
               "RelativeDocumentMoniker": "BlogApplication.API\\Controllers\\CategoriesController.cs",
               "ToolTip": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\Controllers\\CategoriesController.cs",
               "RelativeToolTip": "BlogApplication.API\\Controllers\\CategoriesController.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAcwGgAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAqwHwAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-19T15:23:01.989Z",
               "EditorCaption": ""

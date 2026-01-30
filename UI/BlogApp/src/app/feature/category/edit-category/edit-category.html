@@ -15,7 +15,7 @@
         <div class="card-body">
 
             <form [formGroup]="editCategoryFormGroup" (ngSubmit)="onSubmit()">
-                
+
                 <!-- ID -->
                 <div class="mb-3">
                     <label class="form-label fw-semibold">
@@ -71,13 +71,18 @@
 
                 <!-- ACTIONS -->
                 <div class="d-flex justify-content-end gap-2">
-                    <a routerLink="/admin/category" class="btn btn-outline-secondary">
+                    <a [routerLink]="['/admin','category']" class="btn btn-outline-secondary">
                         Cancel
                     </a>
 
                     <button type="submit" class="btn btn-primary" [disabled]="editCategoryFormGroup.invalid">
                         <i class="bi bi-save me-1"></i>
                         Save Category
+                    </button>
+
+                    <button type="button" class="btn btn-danger" (click)="onDeleteCategory()">
+                        <i class="bi bi-trash me-1"></i>
+                        Delete Category
                     </button>
                 </div>
 

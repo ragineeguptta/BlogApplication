@@ -45,5 +45,21 @@ namespace BlogApplication.API.Repositories.Implementation
             return category;
 
         }
+
+        public async Task<Category?> DeleteAsync(Guid id)
+        {
+            var existingCategory = await _context.Categories.FirstOrDefaultAsync(x => x.Id == id);
+
+            if (existingCategory is null)
+            {
+                return null;
+            }
+
+            _context.Categories.Remove(existingCategory);
+            await _context.SaveChangesAsync();
+
+            return existingCategory;
+
+        }
     }
 }
