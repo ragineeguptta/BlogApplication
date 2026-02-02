@@ -1,0 +1,29 @@
+﻿using BlogApplication.API.Data;
+using BlogApplication.API.Model.Domain;
+using BlogApplication.API.Repositories.Interface;
+using Microsoft.EntityFrameworkCore;
+
+namespace BlogApplication.API.Repositories.Implementation
+{
+    public class BlogPostRepository : IBlogPostRepository
+    {
+        private readonly ApplicationDbContext _context;
+        public BlogPostRepository(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+        public async Task<BlogPost> CreateAsync(BlogPost blogPost)
+        {
+            await _context.BlogPosts.AddAsync(blogPost);
+            await _context.SaveChangesAsync();
+            return blogPost;
+        }
+
+        public async Task<IEnumerable<BlogPost>> GetAllAsync()
+        {
+            return await _context.BlogPosts.ToListAsync();
+            
+
+        }
+    }
+}

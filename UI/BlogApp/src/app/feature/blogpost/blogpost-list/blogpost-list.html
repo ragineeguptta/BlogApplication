@@ -1,1 +1,98 @@
-<p>blogpost-list works!</p>
+<div class="container mt-4">
+
+  <!-- PAGE HEADER -->
+  <div class="card shadow-sm mb-4">
+    <div class="card-body d-flex justify-content-between align-items-center">
+      <h3 class="mb-0 fw-bold">
+        <i class="bi bi-journal-text text-primary me-2"></i>
+        Blog Post Management
+      </h3>
+
+      <a
+        [routerLink]="['/admin','blogposts','add']"
+        class="btn btn-primary">
+        <i class="bi bi-plus-circle me-1"></i>
+        Add Blog Post
+      </a>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="card shadow-sm">
+    <div class="card-body">
+
+      @if (isLoading()) {
+        <div class="text-center py-5">
+          <div class="spinner-border text-primary" role="status"></div>
+          <p class="mt-2 mb-0">Loading blog posts...</p>
+        </div>
+      }
+      @else {
+
+        @if (isError()) {
+          <div class="alert alert-danger text-center">
+            <i class="bi bi-exclamation-triangle me-2"></i>
+            Something went wrong. Please try again.
+          </div>
+        }
+        @else {
+
+          <div class="table-responsive">
+            <table class="table table-hover align-middle">
+              <thead class="table-light">
+                <tr>
+                  <th>#</th>
+                  <th>Title</th>
+                  <th>Author</th>
+                  <th>Published Date</th>
+                  <th>Status</th>
+                  <th class="text-center">Actions</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                @for (post of value(); track post.id; let i = $index) {
+                  <tr>
+                    <td>{{ i + 1 }}</td>
+
+                    <td class="fw-semibold">
+                      {{ post.title }}
+                      <div class="text-muted small">
+                        {{ post.shortDescription }}
+                      </div>
+                    </td>
+
+                    <td>{{ post.author }}</td>
+
+                    <td>
+                      {{ post.publishedDate | date:'mediumDate' }}
+                    </td>
+
+                    <td>
+                      <span
+                        class="badge"
+                        [ngClass]="post.isVisible ? 'bg-success' : 'bg-secondary'">
+                        {{ post.isVisible ? 'Visible' : 'Hidden' }}
+                      </span>
+                    </td>
+
+                    <td class="text-center">
+                      <a
+                        class="btn btn-sm btn-outline-primary me-2"
+                        [routerLink]="['/admin/blogposts/edit', post.id]">
+                        Edit
+                      </a>
+                    </td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+
+        }
+      }
+
+    </div>
+  </div>
+
+</div>
