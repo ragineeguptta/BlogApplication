@@ -11,29 +11,41 @@ namespace BlogApplication.API.Controllers
     public class BlogPostsController : ControllerBase
     {
         private readonly IBlogPostRepository _blogPostRepository;
-        public BlogPostsController(IBlogPostRepository blogPostRepository)
+        private readonly ICategoryRepository _categoryRepository;
+        public BlogPostsController(IBlogPostRepository blogPostRepository, ICategoryRepository categoryRepository)
         {
             _blogPostRepository = blogPostRepository;
+            _categoryRepository = categoryRepository;
         }
 
         //post: api/blogposts
         [HttpPost]
-        public async Task<IActionResult> CreateBlogPost([FromBody] CreateBlogPostRequestDto blogPostRequestDto)
+        public async Task<IActionResult> CreateBlogPost([FromBody] CreateBlogPostRequestDto request)
         {
             //convert dto to domain
             var blogPost = new BlogPost
             {
-                Title = blogPostRequestDto.Title,
-                ShortDescription = blogPostRequestDto.ShortDescription,
-                Content = blogPostRequestDto.Content,
-                FeatureImageUrl = blogPostRequestDto.FeatureImageUrl,
-                UrlHandle = blogPostRequestDto.UrlHandle,
-                PublishedDate = blogPostRequestDto.PublishedDate,
-                Author = blogPostRequestDto.Author,
-                IsVisible = blogPostRequestDto.IsVisible
+                Title = request.Title,
+                ShortDescription = request.ShortDescription,
+                Content = request.Content,
+                FeatureImageUrl = request.FeatureImageUrl,
+                UrlHandle = request.UrlHandle,
+                PublishedDate = request.PublishedDate,
+                Author = request.Author,
+                IsVisible = request.IsVisible,
+                Categories = new List<Category>()
             };
 
-            await _blogPostRepository.CreateAsync(blogPost);
+            foreach (var categoryGuid in request.Categories)
+            {
+                var existingCategory = await _categoryRepository.GetById(categoryGuid);
+                if (existingCategory != null)
+                {
+                    blogPost.Categories.Add(existingCategory);
+                }
+            }
+
+            blogPost = await _blogPostRepository.CreateAsync(blogPost);
 
             //convert domain to dto
             var response = new BlogPostDto
@@ -46,7 +58,13 @@ namespace BlogApplication.API.Controllers
                 UrlHandle = blogPost.UrlHandle,
                 PublishedDate = blogPost.PublishedDate,
                 Author = blogPost.Author,
-                IsVisible = blogPost.IsVisible
+                IsVisible = blogPost.IsVisible,
+                Categories = blogPost.Categories.Select(c => new CategoryDto
+                {
+                    Id = c.Id,
+                    Name = c.Name,
+                    UrlHandle = c.UrlHandle
+                }).ToList()
             };
 
             return Ok(response);
@@ -74,7 +92,13 @@ namespace BlogApplication.API.Controllers
                     UrlHandle = blogPost.UrlHandle,
                     PublishedDate = blogPost.PublishedDate,
                     Author = blogPost.Author,
-                    IsVisible = blogPost.IsVisible
+                    IsVisible = blogPost.IsVisible,
+                    Categories = blogPost.Categories.Select(c => new CategoryDto
+                    {
+                        Id = c.Id,
+                        Name = c.Name,
+                        UrlHandle = c.UrlHandle
+                    }).ToList()
                 });
             }
 

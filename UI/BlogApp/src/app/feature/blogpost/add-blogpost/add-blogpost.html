@@ -101,6 +101,15 @@
                  placeholder="angular-reactive-forms"
                  formControlName="urlHandle" />
         </div>
+        <!-- CATEGORY SELECTION -->
+        <div class="mb-4">
+          <label class="form-label fw-semibold">Category</label>
+          <select class="form-control" multiple formControlName="categories">
+            @for (category of categoriesResponse(); track category.id) {
+              <option [value]="category.id">{{ category.name }}</option>
+            }
+          </select>
+          </div>
 
         <!-- AUTHOR & DATE -->
         <div class="row mb-4">

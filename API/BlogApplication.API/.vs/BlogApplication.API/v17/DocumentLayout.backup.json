@@ -11,16 +11,20 @@
       "RelativeMoniker": "D:0:0:{0B3CA093-2465-42C9-BF2B-72EDE3828FC2}|BlogApplication.API\\BlogApplication.API.csproj|solutionrelative:blogapplication.api\\repositories\\implementation\\blogpostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B3CA093-2465-42C9-BF2B-72EDE3828FC2}|BlogApplication.API\\BlogApplication.API.csproj|c:\\ragineeproject\\blogapplication\\api\\blogapplication.api\\blogapplication.api\\repositories\\interface\\iblogpostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B3CA093-2465-42C9-BF2B-72EDE3828FC2}|BlogApplication.API\\BlogApplication.API.csproj|solutionrelative:blogapplication.api\\repositories\\interface\\iblogpostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0B3CA093-2465-42C9-BF2B-72EDE3828FC2}|BlogApplication.API\\BlogApplication.API.csproj|c:\\ragineeproject\\blogapplication\\api\\blogapplication.api\\blogapplication.api\\dto\\blogpostdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0B3CA093-2465-42C9-BF2B-72EDE3828FC2}|BlogApplication.API\\BlogApplication.API.csproj|solutionrelative:blogapplication.api\\dto\\blogpostdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B3CA093-2465-42C9-BF2B-72EDE3828FC2}|BlogApplication.API\\BlogApplication.API.csproj|c:\\ragineeproject\\blogapplication\\api\\blogapplication.api\\blogapplication.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B3CA093-2465-42C9-BF2B-72EDE3828FC2}|BlogApplication.API\\BlogApplication.API.csproj|solutionrelative:blogapplication.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0B3CA093-2465-42C9-BF2B-72EDE3828FC2}|BlogApplication.API\\BlogApplication.API.csproj|c:\\ragineeproject\\blogapplication\\api\\blogapplication.api\\blogapplication.api\\dto\\createblogpostrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B3CA093-2465-42C9-BF2B-72EDE3828FC2}|BlogApplication.API\\BlogApplication.API.csproj|solutionrelative:blogapplication.api\\dto\\createblogpostrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B3CA093-2465-42C9-BF2B-72EDE3828FC2}|BlogApplication.API\\BlogApplication.API.csproj|c:\\ragineeproject\\blogapplication\\api\\blogapplication.api\\blogapplication.api\\model\\domain\\blogpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B3CA093-2465-42C9-BF2B-72EDE3828FC2}|BlogApplication.API\\BlogApplication.API.csproj|solutionrelative:blogapplication.api\\model\\domain\\blogpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B3CA093-2465-42C9-BF2B-72EDE3828FC2}|BlogApplication.API\\BlogApplication.API.csproj|c:\\ragineeproject\\blogapplication\\api\\blogapplication.api\\blogapplication.api\\model\\domain\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B3CA093-2465-42C9-BF2B-72EDE3828FC2}|BlogApplication.API\\BlogApplication.API.csproj|solutionrelative:blogapplication.api\\model\\domain\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,39 +46,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\Program.cs",
-              "RelativeDocumentMoniker": "BlogApplication.API\\Program.cs",
-              "ToolTip": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\Program.cs",
-              "RelativeToolTip": "BlogApplication.API\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T18:51:58.619Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "BlogPostRepository.cs",
               "DocumentMoniker": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\Repositories\\Implementation\\BlogPostRepository.cs",
               "RelativeDocumentMoniker": "BlogApplication.API\\Repositories\\Implementation\\BlogPostRepository.cs",
               "ToolTip": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\Repositories\\Implementation\\BlogPostRepository.cs",
               "RelativeToolTip": "BlogApplication.API\\Repositories\\Implementation\\BlogPostRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T18:49:38.502Z"
+              "WhenOpened": "2026-02-03T10:30:03.146Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "IBlogPostRepository.cs",
-              "DocumentMoniker": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\Repositories\\Interface\\IBlogPostRepository.cs",
-              "RelativeDocumentMoniker": "BlogApplication.API\\Repositories\\Interface\\IBlogPostRepository.cs",
-              "ToolTip": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\Repositories\\Interface\\IBlogPostRepository.cs",
-              "RelativeToolTip": "BlogApplication.API\\Repositories\\Interface\\IBlogPostRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Title": "BlogPostDto.cs",
+              "DocumentMoniker": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\DTO\\BlogPostDto.cs",
+              "RelativeDocumentMoniker": "BlogApplication.API\\DTO\\BlogPostDto.cs",
+              "ToolTip": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\DTO\\BlogPostDto.cs",
+              "RelativeToolTip": "BlogApplication.API\\DTO\\BlogPostDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T18:48:48.663Z"
+              "WhenOpened": "2026-02-03T10:21:40.997Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -84,22 +78,49 @@
               "RelativeDocumentMoniker": "BlogApplication.API\\Controllers\\BlogPostsController.cs",
               "ToolTip": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\Controllers\\BlogPostsController.cs",
               "RelativeToolTip": "BlogApplication.API\\Controllers\\BlogPostsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAYwGUAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T18:46:02.968Z",
+              "WhenOpened": "2026-02-03T10:16:25.034Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "BlogPostDto.cs",
-              "DocumentMoniker": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\DTO\\BlogPostDto.cs",
-              "RelativeDocumentMoniker": "BlogApplication.API\\DTO\\BlogPostDto.cs",
-              "ToolTip": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\DTO\\BlogPostDto.cs",
-              "RelativeToolTip": "BlogApplication.API\\DTO\\BlogPostDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
+              "Title": "CreateBlogPostRequestDto.cs",
+              "DocumentMoniker": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\DTO\\CreateBlogPostRequestDto.cs",
+              "RelativeDocumentMoniker": "BlogApplication.API\\DTO\\CreateBlogPostRequestDto.cs",
+              "ToolTip": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\DTO\\CreateBlogPostRequestDto.cs",
+              "RelativeToolTip": "BlogApplication.API\\DTO\\CreateBlogPostRequestDto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA/wA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T18:44:10.496Z"
+              "WhenOpened": "2026-02-03T10:15:21.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\Model\\Domain\\Category.cs",
+              "RelativeDocumentMoniker": "BlogApplication.API\\Model\\Domain\\Category.cs",
+              "ToolTip": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\Model\\Domain\\Category.cs",
+              "RelativeToolTip": "BlogApplication.API\\Model\\Domain\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T09:49:05.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BlogPost.cs",
+              "DocumentMoniker": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\Model\\Domain\\BlogPost.cs",
+              "RelativeDocumentMoniker": "BlogApplication.API\\Model\\Domain\\BlogPost.cs",
+              "ToolTip": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\Model\\Domain\\BlogPost.cs",
+              "RelativeToolTip": "BlogApplication.API\\Model\\Domain\\BlogPost.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T09:49:04.324Z",
+              "EditorCaption": ""
             }
           ]
         }
