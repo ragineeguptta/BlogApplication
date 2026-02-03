@@ -2,13 +2,13 @@ import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { BlogpostService } from '../services/blogpost-service';
 import { AddBlogPostRequest } from '../models/blogpost.model';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { MarkdownModule } from 'ngx-markdown';
 import { CategoryService } from '../../category/services/category-service';
 
 @Component({
   selector: 'app-add-blogpost',
-  imports: [ReactiveFormsModule, MarkdownModule],
+  imports: [ReactiveFormsModule, MarkdownModule, RouterLink],
   templateUrl: './add-blogpost.html',
   styleUrl: './add-blogpost.css',
 })
@@ -40,7 +40,7 @@ export class AddBlogpost {
       nonNullable: true,
       validators: [Validators.required, Validators.minLength(1), Validators.maxLength(200)],
     }),
-    publishedDate: new FormControl<Date>(new Date(), {
+    publishedDate: new FormControl<string>(new Date().toISOString().split('T')[0], {
       nonNullable: true,
       validators: [Validators.required],
     }),
@@ -66,7 +66,7 @@ export class AddBlogpost {
       featureImageUrl: formRawValue.featureImageUrl,
       urlHandle: formRawValue.urlHandle,
       author: formRawValue.author,
-      publishedDate: formRawValue.publishedDate,
+      publishedDate: new Date(formRawValue.publishedDate),
       isVisible: formRawValue.isVisible,
       categories: formRawValue.categories ?? [],
     };

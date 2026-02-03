@@ -23,5 +23,29 @@ namespace BlogApplication.API.Repositories.Implementation
         {
             return await _context.BlogPosts.Include(x => x.Categories).ToListAsync();
         }
+
+        public async Task<BlogPost?> GetById(Guid id)
+        {
+            return await _context.BlogPosts.Include(x => x.Categories).FirstOrDefaultAsync(x => x.Id == id);
+        }
+
+        public async Task<BlogPost> UpdateAsync(BlogPost blogPost)
+        {
+            var existingblogPost = await _context.BlogPosts.Include(x => x.Categories).FirstOrDefaultAsync(x => x.Id == blogPost.Id);
+
+            if (existingblogPost == null)
+            {
+                return null;
+            }
+            
+            _context.Entry(existingblogPost).CurrentValues.SetValues(blogPost);
+
+            //update categories
+            existingblogPost.Categories = blogPost.Categories;
+
+            await _context.SaveChangesAsync();
+
+            return blogPost;
+        }
     }
 }
