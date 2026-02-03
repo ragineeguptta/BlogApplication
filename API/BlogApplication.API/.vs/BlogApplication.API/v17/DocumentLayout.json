@@ -50,8 +50,7 @@
               "RelativeToolTip": "BlogApplication.API\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T18:51:58.619Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-02T18:51:58.619Z"
             },
             {
               "$type": "Document",
@@ -63,8 +62,7 @@
               "RelativeToolTip": "BlogApplication.API\\Repositories\\Implementation\\BlogPostRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T18:49:38.502Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-02T18:49:38.502Z"
             },
             {
               "$type": "Document",
@@ -76,8 +74,7 @@
               "RelativeToolTip": "BlogApplication.API\\Repositories\\Interface\\IBlogPostRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T18:48:48.663Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-02T18:48:48.663Z"
             },
             {
               "$type": "Document",
@@ -87,7 +84,7 @@
               "RelativeDocumentMoniker": "BlogApplication.API\\Controllers\\BlogPostsController.cs",
               "ToolTip": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\Controllers\\BlogPostsController.cs",
               "RelativeToolTip": "BlogApplication.API\\Controllers\\BlogPostsController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAiwE4AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-02T18:46:02.968Z",
               "EditorCaption": ""
@@ -102,8 +99,7 @@
               "RelativeToolTip": "BlogApplication.API\\DTO\\BlogPostDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T18:44:10.496Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-02T18:44:10.496Z"
             }
           ]
         }

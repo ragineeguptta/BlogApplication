@@ -3,10 +3,11 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { BlogpostService } from '../services/blogpost-service';
 import { AddBlogPostRequest } from '../models/blogpost.model';
 import { Router } from '@angular/router';
+import { MarkdownModule } from 'ngx-markdown';
 
 @Component({
   selector: 'app-add-blogpost',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, MarkdownModule],
   templateUrl: './add-blogpost.html',
   styleUrl: './add-blogpost.css',
 })

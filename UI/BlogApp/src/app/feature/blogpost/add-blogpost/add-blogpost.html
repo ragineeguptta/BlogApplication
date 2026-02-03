@@ -1,148 +1,148 @@
-<div class="container mt-4">
+<div class="container my-5" style="max-width: 1100px;">
 
   <!-- PAGE HEADER -->
-  <div class="card shadow-sm mb-4">
-    <div class="card-body">
-      <h3 class="fw-bold mb-0">
-        <i class="bi bi-plus-circle text-primary me-2"></i>
-        Add Blog Post
-      </h3>
+  <div class="card page-header mb-4">
+    <div class="card-body d-flex align-items-center">
+      <i class="bi bi-plus-circle-fill text-primary fs-3 me-3"></i>
+      <div>
+        <h4 class="fw-bold mb-0">Add Blog Post</h4>
+        <small class="text-muted">Create and publish a new blog article</small>
+      </div>
     </div>
   </div>
 
   <!-- FORM CARD -->
-  <div class="card shadow-sm">
-    <div class="card-body">
+  <div class="card shadow-sm blog-form-card">
+    <div class="card-body p-4">
 
       <form [formGroup]="addblogpostForm" (ngSubmit)="onSubmit()">
 
         <!-- TITLE -->
-        <div class="mb-3">
+        <div class="mb-4">
           <label class="form-label fw-semibold">Title</label>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Enter blog title"
-            formControlName="title" />
+          <input type="text"
+                 class="form-control form-control-lg"
+                 placeholder="Enter blog title"
+                 formControlName="title" />
 
-          @if (addblogpostForm.controls.title.touched && addblogpostForm.controls.title.hasError('required')) {
-            <small class="text-danger">Title is required</small>
-          }
-
-          @if (addblogpostForm.controls.title.touched && addblogpostForm.controls.title.hasError('minlength')) {
-            <small class="text-danger">Minimum 5 characters required</small>
-          }
-
-          @if (addblogpostForm.controls.title.touched && addblogpostForm.controls.title.hasError('maxlength')) {
-            <small class="text-danger">Maximum 100 characters allowed</small>
+          @if (addblogpostForm.controls.title.touched && addblogpostForm.controls.title.errors) {
+            <small class="text-danger">
+              Title must be between 5 and 100 characters
+            </small>
           }
         </div>
 
         <!-- SHORT DESCRIPTION -->
-        <div class="mb-3">
+        <div class="mb-4">
           <label class="form-label fw-semibold">Short Description</label>
-          <textarea
-            rows="3"
-            class="form-control"
-            placeholder="Enter short description"
-            formControlName="shortDescription">
-          </textarea>
-
-          @if (addblogpostForm.controls.shortDescription.touched && addblogpostForm.controls.shortDescription.hasError('required')) {
-            <small class="text-danger">Short description is required</small>
-          }
+          <textarea rows="3"
+                    class="form-control"
+                    placeholder="Brief summary of the blog"
+                    formControlName="shortDescription"></textarea>
         </div>
 
-        <!-- CONTENT -->
-        <div class="mb-3">
+        <!-- CONTENT + PREVIEW -->
+        <div class="mb-4">
           <label class="form-label fw-semibold">Content</label>
-          <textarea
-            rows="6"
-            class="form-control"
-            placeholder="Write blog content here..."
-            formControlName="content">
-          </textarea>
 
-          @if (addblogpostForm.controls.content.touched && addblogpostForm.controls.content.hasError('required')) {
-            <small class="text-danger">Content is required</small>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <textarea rows="10"
+                        class="form-control"
+                        placeholder="Write markdown content here..."
+                        formControlName="content"></textarea>
+            </div>
+
+            <div class="col-md-6">
+              <div class="preview-card">
+                <div class="preview-header">Live Preview</div>
+                <div class="preview-body">
+                  <markdown
+                    [data]="addblogpostForm.controls.content.getRawValue()">
+                  </markdown>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          @if (
+            addblogpostForm.controls.content.touched &&
+            addblogpostForm.controls.content.hasError('required')
+          ) {
+            <small class="text-danger">
+              Content is required
+            </small>
           }
         </div>
 
-        <!-- FEATURE IMAGE URL -->
-        <div class="mb-3">
+        <!-- FEATURE IMAGE -->
+        <div class="mb-4">
           <label class="form-label fw-semibold">Feature Image URL</label>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="https://example.com/image.jpg"
-            formControlName="featureImageUrl" />
+          <input type="text"
+                 class="form-control"
+                 placeholder="https://example.com/image.jpg"
+                 formControlName="featureImageUrl" />
 
-          @if (addblogpostForm.controls.featureImageUrl.touched && addblogpostForm.controls.featureImageUrl.hasError('required')) {
-            <small class="text-danger">Feature image URL is required</small>
+          @if (addblogpostForm.controls.featureImageUrl.getRawValue()) {
+            <div class="image-preview mt-3">
+              <img
+                [src]="addblogpostForm.controls.featureImageUrl.getRawValue()"
+                alt="Feature Image"
+                class="img-fluid rounded" />
+            </div>
           }
         </div>
 
         <!-- URL HANDLE -->
-        <div class="mb-3">
+        <div class="mb-4">
           <label class="form-label fw-semibold">URL Handle (Slug)</label>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="e.g. angular-reactive-forms"
-            formControlName="urlHandle" />
-
-          @if (addblogpostForm.controls.urlHandle.touched && addblogpostForm.controls.urlHandle.hasError('required')) {
-            <small class="text-danger">URL handle is required</small>
-          }
+          <input type="text"
+                 class="form-control"
+                 placeholder="angular-reactive-forms"
+                 formControlName="urlHandle" />
         </div>
 
-        <!-- AUTHOR -->
-        <div class="mb-3">
-          <label class="form-label fw-semibold">Author</label>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Author name"
-            formControlName="author" />
+        <!-- AUTHOR & DATE -->
+        <div class="row mb-4">
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Author</label>
+            <input type="text"
+                   class="form-control"
+                   placeholder="Author name"
+                   formControlName="author" />
+          </div>
 
-          @if (addblogpostForm.controls.author.touched && addblogpostForm.controls.author.hasError('required')) {
-            <small class="text-danger">Author is required</small>
-          }
-        </div>
-
-        <!-- PUBLISHED DATE -->
-        <div class="mb-3">
-          <label class="form-label fw-semibold">Published Date</label>
-          <input
-            type="date"
-            class="form-control"
-            formControlName="publishedDate" />
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Published Date</label>
+            <input type="date"
+                   class="form-control"
+                   formControlName="publishedDate" />
+          </div>
         </div>
 
         <!-- VISIBILITY -->
-        <div class="form-check mb-4">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            formControlName="isVisible"
-            id="isVisible" />
+        <div class="form-check form-switch mb-4">
+          <input class="form-check-input"
+                 type="checkbox"
+                 id="isVisible"
+                 formControlName="isVisible">
           <label class="form-check-label fw-semibold" for="isVisible">
-            Is Visible
+            Publish Immediately
           </label>
         </div>
 
         <!-- ACTION BUTTONS -->
-        <div class="d-flex justify-content-end gap-2">
-          <a routerLink="/admin/blogposts" class="btn btn-outline-secondary">
+        <div class="d-flex justify-content-end gap-3">
+          <a routerLink="/admin/blogposts"
+             class="btn btn-light px-4">
             Cancel
           </a>
 
-          <button
-            type="submit"
-            class="btn btn-primary"
-            [disabled]="addblogpostForm.invalid">
-            <i class="bi bi-save me-1"></i>
-            Save Blog Post
+          <button type="submit"
+                  class="btn btn-primary px-4"
+                  [disabled]="addblogpostForm.invalid">
+            <i class="bi bi-save me-2"></i>
+            Save Blog
           </button>
         </div>
 

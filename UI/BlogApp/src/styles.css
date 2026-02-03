@@ -15,3 +15,63 @@
   box-shadow: none;
   border-color: #0d6efd;
 }
+/* Page header */
+.page-header {
+  background: linear-gradient(135deg, #f8f9fa, #ffffff);
+  border: 1px solid #e9ecef;
+}
+
+/* Form card */
+.blog-form-card {
+  border-radius: 14px;
+  border: none;
+}
+
+/* Inputs */
+.form-control,
+.form-control-lg {
+  border-radius: 10px;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.15);
+}
+
+/* Markdown preview */
+.preview-card {
+  border: 1px dashed #dee2e6;
+  border-radius: 12px;
+  height: 100%;
+  background-color: #fafafa;
+}
+
+.preview-header {
+  padding: 10px 14px;
+  font-weight: 600;
+  font-size: 14px;
+  background-color: #f1f3f5;
+  border-bottom: 1px dashed #dee2e6;
+}
+
+.preview-body {
+  padding: 14px;
+  max-height: 300px;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+/* Image preview */
+.image-preview img {
+  max-height: 220px;
+  object-fit: cover;
+  border: 1px solid #e9ecef;
+}
+
+/* Buttons */
+.btn-primary {
+  border-radius: 10px;
+}
+
+.btn-light {
+  border-radius: 10px;
+}
