@@ -201,5 +201,35 @@ namespace BlogApplication.API.Controllers
             return Ok(response);
 
         }
+
+        //delete: api/blogposts/{id}
+        [HttpDelete]
+        [Route("{id:Guid}")]
+        public async Task<IActionResult> DeleteBlogPostById([FromRoute] Guid id)
+        {
+            var deletedblogPost = await _blogPostRepository.DeleteAsync(id);
+
+            if (deletedblogPost is null)
+            {
+                return NotFound();
+            }
+
+            //domain to dto
+            var response = new BlogPostDto
+            {
+                Id = deletedblogPost.Id,
+                Title = deletedblogPost.Title,
+                ShortDescription = deletedblogPost.ShortDescription,
+                Content = deletedblogPost.Content,
+                FeatureImageUrl = deletedblogPost.FeatureImageUrl,
+                UrlHandle = deletedblogPost.UrlHandle,
+                PublishedDate = deletedblogPost.PublishedDate,
+                Author = deletedblogPost.Author,
+                IsVisible = deletedblogPost.IsVisible,
+            };
+
+            return Ok(response);
+
+        }
     }
 }

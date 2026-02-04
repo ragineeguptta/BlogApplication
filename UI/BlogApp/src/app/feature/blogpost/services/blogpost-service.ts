@@ -28,4 +28,8 @@ export class BlogpostService {
     return this.http.put<BlogPost>(`${this.apiBaseUrl}/api/BlogPosts/${id}`, body);
   }
 
+  deleteBlogPost(id: string): Observable<void> {
+    return this.http.delete<void>(`${this.apiBaseUrl}/api/BlogPosts/${id}`);
+  }
+
 }

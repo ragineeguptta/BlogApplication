@@ -19,6 +19,18 @@ namespace BlogApplication.API.Repositories.Implementation
             return blogPost;
         }
 
+        public async Task<BlogPost?> DeleteAsync(Guid id)
+        {
+           var existing =  await _context.BlogPosts.FirstOrDefaultAsync(x => x.Id == id);
+            if (existing == null)
+            {
+                 return null;
+            }
+            _context.BlogPosts.Remove(existing);
+            await _context.SaveChangesAsync();
+            return existing;
+        }
+
         public async Task<IEnumerable<BlogPost>> GetAllAsync()
         {
             return await _context.BlogPosts.Include(x => x.Categories).ToListAsync();
