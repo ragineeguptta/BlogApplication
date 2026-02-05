@@ -1,0 +1,8 @@
+img {
+  cursor: pointer;
+  max-width: 110px;
+}
+
+.small {
+  max-width: 100%;
+}

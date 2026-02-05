@@ -1,10 +1,11 @@
-import { Component, inject } from '@angular/core';
+import { Component, effect, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { BlogpostService } from '../services/blogpost-service';
 import { AddBlogPostRequest } from '../models/blogpost.model';
 import { Router, RouterLink } from '@angular/router';
 import { MarkdownModule } from 'ngx-markdown';
 import { CategoryService } from '../../category/services/category-service';
+import { ImageSelectorService } from '../../../shared/services/image-selector-service';
 
 @Component({
   selector: 'app-add-blogpost',
@@ -15,9 +16,20 @@ import { CategoryService } from '../../category/services/category-service';
 export class AddBlogpost {
   blogPostService = inject(BlogpostService);
   categoryService = inject(CategoryService);
+  imageSelectorService = inject(ImageSelectorService);
   router = inject(Router);
   private categoriesResourceRef = this.categoryService.getAllCategories();
   categoriesResponse = this.categoriesResourceRef.value;
+
+  
+  selectedImageEffect = effect(() => {
+    const selectedImageUrl = this.imageSelectorService.selectedImage();
+    if (selectedImageUrl) {
+      this.addblogpostForm.patchValue({
+        featureImageUrl: selectedImageUrl
+      });
+    }
+  });
 
   addblogpostForm = new FormGroup({
     title: new FormControl<string>('', {
@@ -80,5 +92,6 @@ export class AddBlogpost {
       },
     });
   }
+
 
 }

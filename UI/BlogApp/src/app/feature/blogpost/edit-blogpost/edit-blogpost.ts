@@ -6,6 +6,7 @@ import { MarkdownModule } from 'ngx-markdown';
 import { RouterLink, Router } from '@angular/router';
 import { CategoryService } from '../../category/services/category-service';
 import { UpdateBlogPostRequest } from '../models/blogpost.model';
+import { ImageSelectorService } from '../../../shared/services/image-selector-service';
 
 @Component({
   selector: 'app-add-blogpost',
@@ -17,6 +18,7 @@ export class EditBlogpost {
   id = input<string>();
   blogPostService = inject(BlogpostService);
   categoruService = inject(CategoryService);
+  imageSelectorService = inject(ImageSelectorService);
   router = inject(Router);
 
   private blogPostsRef = this.blogPostService.getBlogPostById(this.id);
@@ -77,6 +79,15 @@ export class EditBlogpost {
     }
   });
 
+  selectedImageEffect = effect(() => {
+    const selectedImageUrl = this.imageSelectorService.selectedImage();
+    if (selectedImageUrl) {
+      this.editblogpostForm.patchValue({
+        featureImageUrl: selectedImageUrl
+      });
+    }
+  });
+
   onSubmit() {
     const id = this.id();
     if (id && this.editblogpostForm.valid) {
@@ -116,5 +127,9 @@ export class EditBlogpost {
         }
       });
     }
+  }
+
+  openImageSelector(){
+    this.imageSelectorService.showImageSelectorPanel();
   }
 }

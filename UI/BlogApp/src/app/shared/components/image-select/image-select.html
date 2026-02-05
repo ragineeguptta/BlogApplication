@@ -1,0 +1,97 @@
+@if (showImageSelector()) {
+
+<div class="img-selector-container">
+  <button class="btn btn-light" type="button" style="position: fixed; top: 10px; right: 10px;" (click)="hide()"> X </button>
+
+  <div class="card h-100 shadow-sm">
+    <div class="card-header bg-light">
+      <h5 class="card-title mb-0 fw-semibold">Images</h5>
+    </div>
+
+    <div class="card-body">
+      <div class="row g-4">
+
+        <!-- Image Preview / Placeholder -->
+        <div class="col-md-8">
+          <div class="border rounded d-flex align-items-center justify-content-center h-100 bg-body-secondary">
+            <div class="col-md-8">
+  <div
+    class="border rounded p-3 bg-body-secondary"
+    style="min-height: 250px;"
+  >
+
+    @if (isLoading()) {
+      <!-- Loading -->
+      <div class="text-center text-muted">
+        Loading images...
+      </div>
+    }
+    @else if (error()) {
+      <!-- Error -->
+      <div class="text-danger text-center">
+        {{ error() }}
+      </div>
+    }
+    @else if (images()?.length) {
+      <!-- Images -->
+      <div class="row g-3">
+        @for (img of images(); track img.id) {
+          <div class="col-md-4" role="button" (click)="onSelectImagae(img)">
+            <img
+              [src]="img.url"
+              [alt]="img.fileName"
+              class="img-fluid rounded shadow-sm"
+            />
+            <!-- Title -->
+            <div class="fw-semibold small text-truncate">
+              {{ img.title }}
+            </div>
+          </div>
+        }
+      </div>
+    }
+    @else {
+      <!-- No Images -->
+      <div class="text-muted text-center">
+        No images found
+      </div>
+    }
+
+  </div>
+</div>
+
+          </div>
+        </div>
+
+        <!-- Upload Form -->
+        <div class="col-md-4">
+          <form [formGroup]="imageSelectorUploadForm" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Upload Image</label>
+              <input type="file" class="form-control" (change)="onFileSelected($event)" />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-semibold">File Name</label>
+              <input type="text" class="form-control" placeholder="Enter filename" formControlName="name">
+            </div> 
+
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Title</label>
+              <input type="text" class="form-control" placeholder="Enter title" formControlName="title">
+            </div>
+
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary"> 
+                Upload Image
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+}

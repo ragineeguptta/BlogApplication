@@ -77,7 +77,10 @@
 
         <!-- FEATURE IMAGE -->
         <div class="mb-4">
-          <label class="form-label fw-semibold">Feature Image URL</label>
+          <label class="form-label fw-semibold">Feature Image URL 
+            <button class="btn btn-light" type="button" (click)="imageSelectorService.showImageSelectorPanel()">
+              Select Image
+            </button></label>
           <input type="text"
                  class="form-control"
                  placeholder="https://example.com/image.jpg"

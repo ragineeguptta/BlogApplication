@@ -75,3 +75,14 @@
 .btn-light {
   border-radius: 10px;
 }
+
+.img-selector-container{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
