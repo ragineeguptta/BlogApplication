@@ -293,3 +293,5 @@ C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\ob
 C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\obj\Debug\net8.0\BlogApplication.API.pdb
 C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\obj\Debug\net8.0\BlogApplication.API.genruntimeconfig.cache
 C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\obj\Debug\net8.0\ref\BlogApplication.API.dll
+C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

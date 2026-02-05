@@ -13,7 +13,9 @@ export class BlogpostService {
   apiBaseUrl = environment.apiBaseUrl;
 
   createBlogPost(data: AddBlogPostRequest): Observable<BlogPost> {
-    return this.http.post<BlogPost>(`${this.apiBaseUrl}/api/BlogPosts`, data);
+    return this.http.post<BlogPost>(`${this.apiBaseUrl}/api/BlogPosts`, data, {
+      withCredentials: true,
+    });
   }
 
   getAllBlogPosts(): HttpResourceRef<BlogPost[] | undefined> {
@@ -29,11 +31,15 @@ export class BlogpostService {
   }
 
   editBlogPost(id: string, body: UpdateBlogPostRequest): Observable<BlogPost> {
-    return this.http.put<BlogPost>(`${this.apiBaseUrl}/api/BlogPosts/${id}`, body);
+    return this.http.put<BlogPost>(`${this.apiBaseUrl}/api/BlogPosts/${id}`, body, {
+      withCredentials: true,
+    });
   }
 
   deleteBlogPost(id: string): Observable<void> {
-    return this.http.delete<void>(`${this.apiBaseUrl}/api/BlogPosts/${id}`);
+    return this.http.delete<void>(`${this.apiBaseUrl}/api/BlogPosts/${id}`, {
+      withCredentials: true,
+    });
   }
 
 
