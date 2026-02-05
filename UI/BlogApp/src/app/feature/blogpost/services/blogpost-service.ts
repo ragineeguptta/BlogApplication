@@ -23,6 +23,10 @@ export class BlogpostService {
   getBlogPostById(id: InputSignal<string | undefined>): HttpResourceRef<BlogPost | undefined> {
     return httpResource<BlogPost>(() => `${this.apiBaseUrl}/api/BlogPosts/${id()}`);
   }
+  
+  getBlogPostByUrlHandle(urlHnadle: InputSignal<string | undefined>): HttpResourceRef<BlogPost | undefined> {
+    return httpResource<BlogPost>(() => `${this.apiBaseUrl}/api/BlogPosts/${urlHnadle()}`);
+  }
 
   editBlogPost(id: string, body: UpdateBlogPostRequest): Observable<BlogPost> {
     return this.http.put<BlogPost>(`${this.apiBaseUrl}/api/BlogPosts/${id}`, body);
@@ -31,5 +35,6 @@ export class BlogpostService {
   deleteBlogPost(id: string): Observable<void> {
     return this.http.delete<void>(`${this.apiBaseUrl}/api/BlogPosts/${id}`);
   }
+
 
 }

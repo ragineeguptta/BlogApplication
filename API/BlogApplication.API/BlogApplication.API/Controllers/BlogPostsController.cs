@@ -140,6 +140,39 @@ namespace BlogApplication.API.Controllers
             return Ok(response);
         }
 
+        // GET: api/blogposts/urlhandle/{urlHandle}
+        [HttpGet("{urlHandle}")]
+        public async Task<IActionResult> GetBlogPostByUrlHandle([FromRoute] string urlHandle)
+        {
+            //get blogpost from repository
+            var blogPost = await _blogPostRepository.GetByUrlHandle(urlHandle);
+            if (blogPost is null)
+            {
+                return NotFound();
+            }
+            //convert domain to dto
+            var response = new BlogPostDto
+            {
+                Id = blogPost.Id,
+                Title = blogPost.Title,
+                ShortDescription = blogPost.ShortDescription,
+                Content = blogPost.Content,
+                FeatureImageUrl = blogPost.FeatureImageUrl,
+                UrlHandle = blogPost.UrlHandle,
+                PublishedDate = blogPost.PublishedDate,
+                Author = blogPost.Author,
+                IsVisible = blogPost.IsVisible,
+                Categories = blogPost.Categories.Select(c => new CategoryDto
+                {
+                    Id = c.Id,
+                    Name = c.Name,
+                    UrlHandle = c.UrlHandle
+                }).ToList()
+            };
+
+            return Ok(response);
+        }
+
         //put: api/blogposts/{id}
         [HttpPut]
         [Route("{id:Guid}")]

@@ -5,8 +5,18 @@ import { EditCategory } from './feature/category/edit-category/edit-category';
 import { BlogpostList } from './feature/blogpost/blogpost-list/blogpost-list';
 import { AddBlogpost } from './feature/blogpost/add-blogpost/add-blogpost';
 import { EditBlogpost } from './feature/blogpost/edit-blogpost/edit-blogpost';
+import { Home } from './feature/public/home/home';
+import { BlogDetails } from './feature/public/blog-details/blog-details';
 
 export const routes: Routes = [
+    {
+        path: '',
+        component: Home
+    },
+    {
+        path: 'blog/:url',
+        component: BlogDetails
+    },
     {
         path: 'admin/category',
         component: CategoryList
