@@ -3,28 +3,8 @@
   "WorkspaceRootPath": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0B3CA093-2465-42C9-BF2B-72EDE3828FC2}|BlogApplication.API\\BlogApplication.API.csproj|c:\\ragineeproject\\blogapplication\\api\\blogapplication.api\\blogapplication.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B3CA093-2465-42C9-BF2B-72EDE3828FC2}|BlogApplication.API\\BlogApplication.API.csproj|solutionrelative:blogapplication.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B3CA093-2465-42C9-BF2B-72EDE3828FC2}|BlogApplication.API\\BlogApplication.API.csproj|c:\\ragineeproject\\blogapplication\\api\\blogapplication.api\\blogapplication.api\\blogapplication.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{0B3CA093-2465-42C9-BF2B-72EDE3828FC2}|BlogApplication.API\\BlogApplication.API.csproj|solutionrelative:blogapplication.api\\blogapplication.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B3CA093-2465-42C9-BF2B-72EDE3828FC2}|BlogApplication.API\\BlogApplication.API.csproj|c:\\ragineeproject\\blogapplication\\api\\blogapplication.api\\blogapplication.api\\dto\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B3CA093-2465-42C9-BF2B-72EDE3828FC2}|BlogApplication.API\\BlogApplication.API.csproj|solutionrelative:blogapplication.api\\dto\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B3CA093-2465-42C9-BF2B-72EDE3828FC2}|BlogApplication.API\\BlogApplication.API.csproj|c:\\ragineeproject\\blogapplication\\api\\blogapplication.api\\blogapplication.api\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{0B3CA093-2465-42C9-BF2B-72EDE3828FC2}|BlogApplication.API\\BlogApplication.API.csproj|solutionrelative:blogapplication.api\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0B3CA093-2465-42C9-BF2B-72EDE3828FC2}|BlogApplication.API\\BlogApplication.API.csproj|c:\\ragineeproject\\blogapplication\\api\\blogapplication.api\\blogapplication.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0B3CA093-2465-42C9-BF2B-72EDE3828FC2}|BlogApplication.API\\BlogApplication.API.csproj|solutionrelative:blogapplication.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B3CA093-2465-42C9-BF2B-72EDE3828FC2}|BlogApplication.API\\BlogApplication.API.csproj|c:\\ragineeproject\\blogapplication\\api\\blogapplication.api\\blogapplication.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{0B3CA093-2465-42C9-BF2B-72EDE3828FC2}|BlogApplication.API\\BlogApplication.API.csproj|solutionrelative:blogapplication.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,76 +26,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LoginResponseDto.cs",
-              "DocumentMoniker": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\DTO\\LoginResponseDto.cs",
-              "RelativeDocumentMoniker": "BlogApplication.API\\DTO\\LoginResponseDto.cs",
-              "ToolTip": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\DTO\\LoginResponseDto.cs",
-              "RelativeToolTip": "BlogApplication.API\\DTO\\LoginResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-06T19:36:12.516Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.Production.json",
-              "DocumentMoniker": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\appsettings.Production.json",
-              "RelativeDocumentMoniker": "BlogApplication.API\\appsettings.Production.json",
-              "ToolTip": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\appsettings.Production.json",
-              "RelativeToolTip": "BlogApplication.API\\appsettings.Production.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-06T16:18:39.939Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\appsettings.json",
-              "RelativeDocumentMoniker": "BlogApplication.API\\appsettings.json",
-              "ToolTip": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\appsettings.json",
-              "RelativeToolTip": "BlogApplication.API\\appsettings.json",
-              "ViewState": "AgIAAAIAAAAAAAAAAAD4vxEAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-06T16:18:34.47Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "BlogApplication.API\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "BlogApplication.API\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAG8AAAAAAAAAAAAqwHMAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-06T16:17:16.549Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BlogApplication.API.csproj",
-              "DocumentMoniker": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\BlogApplication.API.csproj",
-              "RelativeDocumentMoniker": "BlogApplication.API\\BlogApplication.API.csproj",
-              "ToolTip": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\BlogApplication.API.csproj",
-              "RelativeToolTip": "BlogApplication.API\\BlogApplication.API.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-02-06T16:03:34.099Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\Program.cs",
               "RelativeDocumentMoniker": "BlogApplication.API\\Program.cs",
               "ToolTip": "C:\\RagineeProject\\BlogApplication\\API\\BlogApplication.API\\BlogApplication.API\\Program.cs",
               "RelativeToolTip": "BlogApplication.API\\Program.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAkwGQAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAAHcAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-06T16:03:18.515Z",
               "EditorCaption": ""

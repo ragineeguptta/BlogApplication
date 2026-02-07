@@ -95,7 +95,7 @@ namespace BlogApplication.API.Controllers
                     {
                         HttpOnly = true,
                         Secure = true,                 // REQUIRED
-                        SameSite = SameSiteMode.Lax,  // REQUIRED
+                        SameSite = SameSiteMode.None,  // REQUIRED
                         Expires = DateTime.UtcNow.AddHours(2)
                         //HttpOnly = true,
                         //Secure = true,
@@ -143,7 +143,7 @@ namespace BlogApplication.API.Controllers
             {
                 HttpOnly = true,
                 Secure = true,
-                SameSite = SameSiteMode.Lax,
+                SameSite = SameSiteMode.None,
                 Expires = DateTime.UtcNow.AddDays(-1)
             });
             return Ok();

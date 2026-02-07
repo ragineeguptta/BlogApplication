@@ -1,4 +1,4 @@
-using BlogApplication.API.Data;
+﻿using BlogApplication.API.Data;
 using BlogApplication.API.Repositories.Implementation;
 using BlogApplication.API.Repositories.Interface;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -16,6 +16,17 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy.WithOrigins("https://purple-field-0188c6a00.4.azurestaticapps.net")
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials();
+    });
+});
+
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -91,8 +102,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-
 app.UseHttpsRedirection();
 
 app.UseForwardedHeaders(new ForwardedHeadersOptions
@@ -100,24 +109,13 @@ app.UseForwardedHeaders(new ForwardedHeadersOptions
     ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
 });
 
-
-app.UseCors(options =>
-{
-    options.AllowAnyHeader();
-    options.AllowAnyMethod();
-    options.WithOrigins("https://purple-field-0188c6a00.4.azurestaticapps.net");
-    options.AllowCredentials();
-});
+// USE NAMED POLICY
+app.UseCors("AllowFrontend");
 
 app.UseAuthentication();
 app.UseAuthorization();
-//app.UseStaticFiles(new StaticFileOptions
-//{
-//    FileProvider = new PhysicalFileProvider(
-//        Path.Combine(Directory.GetCurrentDirectory(), "Images")),
-//    RequestPath = "/Images"
-//});
-app.UseStaticFiles(); // serves wwwroot automatically
+
+app.UseStaticFiles();
 
 app.UseStaticFiles(new StaticFileOptions
 {
@@ -126,7 +124,5 @@ app.UseStaticFiles(new StaticFileOptions
     RequestPath = "/Images"
 });
 
-
 app.MapControllers();
-
 app.Run();
