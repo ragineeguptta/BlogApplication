@@ -1,0 +1,37 @@
+{
+  "dependencies": {
+    "mssql2": {
+      "restored": true,
+      "restoreTime": "2026-02-05T21:19:05.877309Z"
+    },
+    "apis1": {
+      "restored": true,
+      "restoreTime": "2026-02-05T21:19:09.2024011Z"
+    },
+    "identityapp1": {
+      "restored": true,
+      "restoreTime": "2026-02-05T21:19:02.7712976Z"
+    },
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2026-02-05T21:15:46.7897371Z"
+    }
+  },
+  "parameters": {
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "70ee081b-362f-4865-837e-ef9476f6e661"
+    },
+    "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "BlogApplication"
+    },
+    "mssql1.serviceConnectorResourceGroupName": {
+      "Name": "mssql1.serviceConnectorResourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "RGBlogApplicationStudentAdminResourceGroup"
+    }
+  }
+}

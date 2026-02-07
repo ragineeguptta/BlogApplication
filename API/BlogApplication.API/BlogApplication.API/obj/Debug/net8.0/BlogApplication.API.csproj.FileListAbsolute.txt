@@ -148,6 +148,8 @@ D:\Clients\GitHub\Raginee\BlogApplication\API\BlogApplication.API\BlogApplicatio
 D:\Clients\GitHub\Raginee\BlogApplication\API\BlogApplication.API\BlogApplication.API\obj\Debug\net8.0\ref\BlogApplication.API.dll
 C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\bin\Debug\net8.0\appsettings.Development.json
 C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\bin\Debug\net8.0\appsettings.json
+C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\bin\Debug\net8.0\appsettings.Production.json
+C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\bin\Debug\net8.0\BlogApplication.API.staticwebassets.runtime.json
 C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\bin\Debug\net8.0\BlogApplication.API.staticwebassets.endpoints.json
 C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\bin\Debug\net8.0\BlogApplication.API.exe
 C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\bin\Debug\net8.0\BlogApplication.API.deps.json
@@ -157,6 +159,8 @@ C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\bi
 C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\bin\Debug\net8.0\Azure.Core.dll
 C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\bin\Debug\net8.0\Azure.Identity.dll
 C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\bin\Debug\net8.0\Humanizer.dll
+C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
 C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -286,12 +290,10 @@ C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\ob
 C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\obj\Debug\net8.0\staticwebassets.development.json
 C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\obj\Debug\net8.0\BlogAppl.803396B9.Up2Date
 C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\obj\Debug\net8.0\BlogApplication.API.dll
 C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\obj\Debug\net8.0\refint\BlogApplication.API.dll
 C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\obj\Debug\net8.0\BlogApplication.API.pdb
 C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\obj\Debug\net8.0\BlogApplication.API.genruntimeconfig.cache
 C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\obj\Debug\net8.0\ref\BlogApplication.API.dll
-C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\RagineeProject\BlogApplication\API\BlogApplication.API\BlogApplication.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

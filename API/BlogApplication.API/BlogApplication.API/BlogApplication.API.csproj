@@ -22,7 +22,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Images\" />
+    <None Include="wwwroot\Images\1za.jpg" />
+    <None Include="wwwroot\Images\dsfs.jpg.png" />
+    <None Include="wwwroot\Images\eywey.png" />
+    <None Include="wwwroot\Images\ImageTest.png" />
+    <None Include="wwwroot\Images\jkfet.jpg" />
+    <None Include="wwwroot\Images\jsdfs.jpd.png" />
+    <None Include="wwwroot\Images\sfm.png" />
+    <None Include="wwwroot\Images\xgsystsy.jpg" />
   </ItemGroup>
 
 </Project>

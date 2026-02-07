@@ -2,6 +2,7 @@ using BlogApplication.API.Data;
 using BlogApplication.API.Repositories.Implementation;
 using BlogApplication.API.Repositories.Interface;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
@@ -62,7 +63,9 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidAudience = builder.Configuration["Jwt:Audience"],
             IssuerSigningKey = new SymmetricSecurityKey(
                 Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])
-            )
+            ),
+
+            ClockSkew = TimeSpan.FromMinutes(2)
         };
 
         options.Events = new JwtBearerEvents
@@ -92,22 +95,37 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseForwardedHeaders(new ForwardedHeadersOptions
+{
+    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+});
+
+
 app.UseCors(options =>
 {
     options.AllowAnyHeader();
     options.AllowAnyMethod();
-    options.WithOrigins("https://localhost:4200");
+    options.WithOrigins("https://purple-field-0188c6a00.4.azurestaticapps.net");
     options.AllowCredentials();
 });
 
 app.UseAuthentication();
 app.UseAuthorization();
+//app.UseStaticFiles(new StaticFileOptions
+//{
+//    FileProvider = new PhysicalFileProvider(
+//        Path.Combine(Directory.GetCurrentDirectory(), "Images")),
+//    RequestPath = "/Images"
+//});
+app.UseStaticFiles(); // serves wwwroot automatically
+
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new PhysicalFileProvider(
-        Path.Combine(Directory.GetCurrentDirectory(), "Images")),
+        Path.Combine(builder.Environment.WebRootPath!, "Images")),
     RequestPath = "/Images"
 });
+
 
 app.MapControllers();
 

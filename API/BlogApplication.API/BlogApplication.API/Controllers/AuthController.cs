@@ -94,9 +94,13 @@ namespace BlogApplication.API.Controllers
                     Response.Cookies.Append("access_token", jwtToken, new CookieOptions
                     {
                         HttpOnly = true,
-                        Secure = true,
-                        SameSite = SameSiteMode.Lax,
-                        Expires = DateTime.UtcNow.AddMinutes(15)
+                        Secure = true,                 // REQUIRED
+                        SameSite = SameSiteMode.Lax,  // REQUIRED
+                        Expires = DateTime.UtcNow.AddHours(2)
+                        //HttpOnly = true,
+                        //Secure = true,
+                        //SameSite = SameSiteMode.Lax,
+                        //Expires = DateTime.UtcNow.AddHours(2)
                     });
 
                     return Ok(response);
